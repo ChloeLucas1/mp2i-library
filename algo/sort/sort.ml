@@ -28,7 +28,7 @@ let rec fusion l1 l2 = match l1, l2 with
     | e1::q1, e2::q2 when e1 <= e2 -> e1::(fusion q1 l2)
     | e1::q1, e2::q2 -> e2::(fusion l1 q2)
 
-(** [merge_sort] sorts a list l *)
+(** [merge_sort] sorts a list l using merge sort (O(nlog(n))) *)
 let rec merge_sort l = match l with
     | [] -> []
     | [e] -> [e]
