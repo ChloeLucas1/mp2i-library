@@ -1,4 +1,4 @@
-#use "sort.ml";;
+#use "../sort.ml";;
 
 (** [duplicate l] return if there is a duplicate (two identical elements) in a list l *)
 let duplicate l =
