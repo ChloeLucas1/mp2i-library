@@ -17,7 +17,7 @@ let element t k =
 
 (** [add t k e] adds an element e with the key k in a dictionary t *)
 let add t k e =
-    t.datas.(t.hash k) <- (k, e)::t.datas(t.hash k)
+    t.datas.(t.hash k) <- (k, e)::t.datas.(t.hash k)
 
 (** [delete t k] deletes the element associated with the key k in a dictionary t, if the key exists *)
 let delete t k =
