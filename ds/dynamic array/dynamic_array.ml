@@ -10,7 +10,7 @@ let copy t1 t2 =
 let add e d =
   if d.n < Array.length d.t then (d.t.(d.n) <- e; d.n <- d.n + 1)
   else if d.n = 0 then (d.t <- [|e|]; d.n <- 1)
-  else (let t' = Array.make (2*d.n) d.t.(0) in
+  else (let t' = Array.make (2*d.n) 0 in
         copy d.t t';
         t'.(d.n) <- e;
         d.t <- t';
